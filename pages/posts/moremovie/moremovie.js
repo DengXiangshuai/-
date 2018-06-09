@@ -28,12 +28,12 @@ Page({
       title: this.data.navigateTitle
     })
 
-    this.getlist()
+    this.getlist(dataurl)
   },
 
   getlist: function () {
     wx.request({
-      url: ` http://t.yushu.im/v2/movie/in_theaters`,
+      url: dataurl,
       success: function (res) {
         that.handle(res.data)
       },
