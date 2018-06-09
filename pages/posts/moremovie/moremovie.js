@@ -1,11 +1,8 @@
 // pages/posts/moremovie/moremovie.js
 var app = getApp()
 var movies = require("../../../data/data.js")
+var util =require("../../../utils/util.js")
 Page({
-  data: {
-    dataurl: ""
-  },
-
 
   onLoad: function (options) {
     var that = this;
@@ -28,21 +25,25 @@ Page({
       title: this.data.navigateTitle
     })
 
-    this.getlist(dataurl)
+   this.getlist(dataurl)
   },
 
-  getlist: function (url) {
+  getlist: function (url){
     wx.request({
       url: url,
+      method: 'GET',
+      header: {
+        "Content-Type": "json"
+      },
       success: function (res) {
-        that.handle(res.data)
+        callBack(res.data);
       },
       fail: function (error) {
-        // fail
         console.log(error)
       }
     })
   },
+
   handle: function (movieDouban) {
     var movie = [];
     for (var idx in movieDouban.subjects) {
