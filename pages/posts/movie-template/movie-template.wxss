@@ -1,0 +1,25 @@
+.Img{
+   width: 200rpx;
+  height: 270rpx;
+  padding-bottom: 15rpx;
+}
+.movie-name{
+  margin-bottom: 16rpx;
+    font-size: 26rpx;
+    margin-left: 40rpx
+}
+.movieNmb{
+  font-size: 24rpx;
+  margin-left: 75rpx;
+}
+.movieContainer{
+  display: flex;
+  flex-direction: column;
+   padding: 0 6rpx;
+   margin-top: 10rpx;
+   margin-left: 30rpx
+}
+.container{
+  display: flex;
+  flex-direction: row;
+}

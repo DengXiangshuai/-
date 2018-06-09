@@ -1,0 +1,8 @@
+<!--pages/welcome/welcoma.wxml-->
+<view class='container'>
+  <text class='text1'>Welcome</text>
+  <image class='Img' src='/images/avatar/5.png'></image>
+  <view class='text2' catchtap='onTap'>
+    <text>Go!</text>
+  </view>
+</view>

@@ -1,0 +1,20 @@
+@import "../movie-template/movie-template.wxss";
+.title{
+  font-size: 30rpx;
+  display:flex;
+  flex-direction: row;
+  justify-content:space-between;
+  background-color: #F0F0F0
+}
+.Ftitle{
+  font-size: 30rpx
+}
+.more-text{
+  margin-right: 10rpx;
+  color: #1f4ba5;
+  font-size: 30rpx
+}
+.more-img{
+ width: 12rpx;
+  height: 20rpx;
+}

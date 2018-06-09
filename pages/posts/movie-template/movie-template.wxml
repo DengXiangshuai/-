@@ -1,0 +1,7 @@
+<template name="movie">
+  <view class='movieContainer'>
+    <image class='Img' src='{{coverageUrl}}'></image>
+    <text class='movie-name'>{{title}}</text>
+    <text class='movieNmb'>{{average}}</text>
+  </view>
+</template>
