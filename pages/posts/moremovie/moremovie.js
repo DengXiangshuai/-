@@ -2,8 +2,8 @@
 var app = getApp()
 var movies = require("../../../data/data.js")
 Page({
-  data :{
-     dataurl : ""
+  data: {
+    dataurl: ""
   },
 
 
@@ -14,13 +14,13 @@ Page({
     var dataurl = "";
     switch ("category") {
       case "北美热映":
-        dataurl = ` http://t.yushu.im/v2/movie/in_theaters` ;
+        dataurl = "http://t.yushu.im" + "/v2/movie/in_theaters";
         break;
-      case "即将上映":                                                    
-        dataurl = ` http://t.yushu.im`  + ` /v2/movie/coming_soon` ;
+      case "即将上映":
+        dataurl = " http://t.yushu.im" + "/v2/movie/coming_soon";
         break;
       case "top250":
-        dataurl = ` http://t.yushu.im`  + ` /v2/movie/top250` ;
+        dataurl = "http://t.yushu.im" + "/v2/movie/top250";
         break;
     }
 
@@ -31,9 +31,9 @@ Page({
     this.getlist(dataurl)
   },
 
-  getlist: function () {
+  getlist: function (url) {
     wx.request({
-      url: dataurl,
+      url: url,
       success: function (res) {
         that.handle(res.data)
       },
