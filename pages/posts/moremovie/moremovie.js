@@ -28,6 +28,7 @@ Page({
   },
 
   getlist: function (url){
+    var that = this 
     wx.request({
       url: url,
       method: 'GET',
@@ -35,7 +36,7 @@ Page({
         "Content-Type": "json"
       },
       success: function (res) {
-        callBack(res.data);
+        that.handle(res.data);
       },
       fail: function (error) {
         console.log(error)
