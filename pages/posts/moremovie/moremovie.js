@@ -9,17 +9,8 @@ Page({
     var category = options.category;
     this.data.navigateTitle = category;
     var dataurl = "";
-    switch ("category") {
-      case "北美热映":
-        dataurl = "http://t.yushu.im" + "/v2/movie/in_theaters";
-        break;
-      case "即将上映":
-        dataurl = " http://t.yushu.im" + "/v2/movie/coming_soon";
-        break;
-      case "top250":
-        dataurl = "http://t.yushu.im" + "/v2/movie/top250";
-        break;
-    }
+    var dataurl = "http://t.yushu.im" + "/v2/movie/in_theaters";
+  
 
     wx.setNavigationBarTitle({
       title: this.data.navigateTitle
@@ -29,6 +20,7 @@ Page({
   },
 
   getlist: function (url){
+    var that = this 
     wx.request({
       url: url,
       method: 'GET',
@@ -36,7 +28,7 @@ Page({
         "Content-Type": "json"
       },
       success: function (res) {
-        callBack(res.data);
+        that.handle(res.data);
       },
       fail: function (error) {
         console.log(error)
