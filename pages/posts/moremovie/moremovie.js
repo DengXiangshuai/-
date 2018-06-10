@@ -8,7 +8,6 @@ Page({
     var that = this;
     var category = options.category;
     this.data.navigateTitle = category;
-    var dataurl = "";
     var dataurl = "http://t.yushu.im" + "/v2/movie/in_theaters";
   
 
