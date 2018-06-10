@@ -24,7 +24,7 @@ Page({
     wx.setNavigationBarTitle({
       title: this.data.navigateTitle
     })
-
+  
    this.getlist(dataurl)
   },
 
