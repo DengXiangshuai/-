@@ -1,7 +1,6 @@
 // pages/posts/moremovie/moremovie.js
 var app = getApp()
 var movies = require("../../../data/data.js")
-var util =require("../../../utils/util.js")
 Page({
 
   onLoad: function (options) {
