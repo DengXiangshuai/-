@@ -9,9 +9,12 @@ Page({
     var category = options.category;
     this.data.navigateTitle = category;
 <<<<<<< HEAD
+<<<<<<< HEAD
     var dataurl = "http://t.yushu.im" + "/v2/movie/in_theaters";
   
 =======
+=======
+>>>>>>> parent of 3b1caa1... a
     var dataurl = "";
     switch ("category") {
       case "北美热映":
@@ -24,6 +27,9 @@ Page({
         dataurl = "http://t.yushu.im" + "/v2/movie/top250";
         break;
     }
+<<<<<<< HEAD
+>>>>>>> parent of 3b1caa1... a
+=======
 >>>>>>> parent of 3b1caa1... a
 
     wx.setNavigationBarTitle({
