@@ -14,9 +14,9 @@ Page({
     })
   },
   onLoad: function () {
-    var inTheatersUrl = app.globalData.doubanBase + "/v2/movie/in_theaters" + "?start=0&count=3";
-    var comingSoonUrl = app.globalData.doubanBase + "/v2/movie/coming_soon" +"?start=0&count=3";
-    var top250Url = app.globalData.doubanBase + "/v2/movie/top250" + "?start=0&count=3"
+    var inTheatersUrl = app.globalData.doubanBase + "/v2/movie/in_theaters" ;
+    var comingSoonUrl = app.globalData.doubanBase + "/v2/movie/coming_soon" ;
+    var top250Url = app.globalData.doubanBase + "/v2/movie/top250" ;
     this.getMovieListData(inTheatersUrl,"inTheaters","北美热映");
     this.getMovieListData(comingSoonUrl,"comingsoon","即将上映");
     this.getMovieListData(top250Url,"top250","top250")

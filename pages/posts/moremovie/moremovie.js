@@ -10,13 +10,13 @@ Page({
     var dataurl = "";
     switch (category) {
       case "北美热映":
-        dataurl = "http://t.yushu.im" + "/v2/movie/in_theaters";
+        dataurl = "http://t.yushu.im" + "/v2/movie/in_theaters" + "?start=0&count=20";
         break;
       case "即将上映":
-        dataurl = "http://t.yushu.im" + "/v2/movie/coming_soon";
+        dataurl = "http://t.yushu.im" + "/v2/movie/coming_soon" + "?start=0&count=20";
         break;
       case "top250":
-        dataurl = "http://t.yushu.im" + "/v2/movie/top250";
+        dataurl = "http://t.yushu.im" + "/v2/movie/top250" + "?start=0&count=20";
         break;
     }
 
