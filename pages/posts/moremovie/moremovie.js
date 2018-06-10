@@ -8,7 +8,7 @@ Page({
     var category = options.category;
     this.data.navigateTitle = category;
     var dataurl = "";
-    switch ("category") {
+    switch (category) {
       case "北美热映":
         dataurl = "http://t.yushu.im" + "/v2/movie/in_theaters";
         break;
