@@ -8,8 +8,23 @@ Page({
     var that = this;
     var category = options.category;
     this.data.navigateTitle = category;
+<<<<<<< HEAD
     var dataurl = "http://t.yushu.im" + "/v2/movie/in_theaters";
   
+=======
+    var dataurl = "";
+    switch ("category") {
+      case "北美热映":
+        dataurl = "http://t.yushu.im" + "/v2/movie/in_theaters";
+        break;
+      case "即将上映":
+        dataurl = " http://t.yushu.im" + "/v2/movie/coming_soon";
+        break;
+      case "top250":
+        dataurl = "http://t.yushu.im" + "/v2/movie/top250";
+        break;
+    }
+>>>>>>> parent of 3b1caa1... a
 
     wx.setNavigationBarTitle({
       title: this.data.navigateTitle
@@ -19,7 +34,6 @@ Page({
   },
 
   getlist: function (url){
-    var that = this 
     wx.request({
       url: url,
       method: 'GET',
@@ -27,7 +41,7 @@ Page({
         "Content-Type": "json"
       },
       success: function (res) {
-        that.handle(res.data);
+        callBack(res.data);
       },
       fail: function (error) {
         console.log(error)
