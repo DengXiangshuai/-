@@ -13,7 +13,7 @@ Page({
         dataurl = "http://t.yushu.im" + "/v2/movie/in_theaters";
         break;
       case "即将上映":
-        dataurl = " http://t.yushu.im" + "/v2/movie/coming_soon";
+        dataurl = "http://t.yushu.im" + "/v2/movie/coming_soon";
         break;
       case "top250":
         dataurl = "http://t.yushu.im" + "/v2/movie/top250";
